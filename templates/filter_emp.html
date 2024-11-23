@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Employee</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Filter employee details</h2>  
+  <hr>
+  <form action="/filter_emp" method="post">
+      {% csrf_token %}
+      <label for="name">First/last name</label>
+      <input type="text" id="name" name="name" value={{name}}><br>
+      <label for="dept">department</label>
+      <input type="text" id="dept" name="dept" value={{dept}}><br>
+      <label for="role">role</label>
+      <input type="text" id="role" name="role" value={{role}}><br>
+    
+      <hr>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+</html>
+
